@@ -36,9 +36,31 @@ public class FizzBuzzTest {
   }
 
   @Test
-  public void checkSize() {
+  public void checkSizeList() {
     String[] maListe = fb.cheatSheet(30);
     String[] expected = new String[30];
     assertThat(maListe.length, is(expected.length));
   }
+
+  @Test
+  public void checkFizz(){
+    String expected = "Fizz";
+    String test = fb.divisionTroisFizz(3);
+    assertThat(test, is(expected));
+  }
+
+  @Test
+  public void checkBuzz(){
+    String expected = "Buzz";
+    String test = fb.divisionCinqBuzz(5);
+    assertThat(test, is(expected));
+  }
+
+  @Test
+  public void checkFizzBuzz(){
+    String expected = "FizzBuzz";
+    String test = fb.divisionTroisCinqFizzBuzz(15);
+    assertThat(test, is(expected));
+  }
+
 }
