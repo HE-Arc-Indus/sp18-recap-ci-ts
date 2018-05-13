@@ -44,17 +44,17 @@ public class FizzBuzz {
   }
 
   public String divisionTroisCinqFizzBuzz(int nombre){
-    return nombre % 3 == 0 && nombre % 5 == 0 ? FIZZBUZZ : String.valueOf(nombre);
+    return (nombre % 3 == 0) && (nombre % 5 == 0) ? FIZZBUZZ : String.valueOf(nombre);
   }
 
   private String intToString(int nombre){
     String s = "";
-    if (divisionTroisFizz(nombre) == FIZZ){
-      s = FIZZ;
+    if (divisionTroisCinqFizzBuzz(nombre) == FIZZBUZZ){
+      s = FIZZBUZZ;
     }else if(divisionCinqBuzz(nombre)== BUZZ){
       s = BUZZ;
-    }else if(divisionTroisCinqFizzBuzz(nombre) == FIZZBUZZ){
-      s = FIZZBUZZ;
+    }else if(divisionTroisFizz(nombre) == FIZZ){
+      s = FIZZ;
     }else{
       s = String.valueOf(nombre);
     }
