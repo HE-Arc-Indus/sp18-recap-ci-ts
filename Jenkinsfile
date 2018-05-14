@@ -21,9 +21,13 @@ pipeline {
 		}
 		stage('Test'){
 			steps{
-                sh 'make check || true' 
-                junit '**/target/*.xml'
+				sh 'mvn test'
 			}
 		}
     }
+	post {
+		always {
+			junit "path/to/xml"
+		}
+	}
 }
