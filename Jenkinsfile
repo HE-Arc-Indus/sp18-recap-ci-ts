@@ -27,10 +27,7 @@ pipeline {
     }
 	post {
 		always {
-			junit "path/to/xml"
+			junit "target/surefire-reports/*.xml"
 		}
-	   success {
-		  archive "target/**/*"
-	   }
 	}
 }
