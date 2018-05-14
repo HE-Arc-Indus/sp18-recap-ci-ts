@@ -29,5 +29,8 @@ pipeline {
 		always {
 			junit "path/to/xml"
 		}
+	   success {
+		  archive "target/**/*"
+	   }
 	}
 }
